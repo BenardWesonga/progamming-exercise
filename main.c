@@ -1,22 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main()
+int main(void)
 {
-  int start, end, increment;
+    float a, b;
+    a = 0;
+    b = -1;
+    while (a <= 100)
 
-    printf("Enter starting value: ");
-    scanf("%d", &start);
-    printf("Enter ending value: ");
-    scanf("%d", &end);
-    printf("Enter increment value: ");
-    scanf("%d", &increment);
-
-    printf("Pounds   Kilograms\n");
-
-    for (int i = start; i <= end; i += increment) {
-        printf("%4d lbs = %4.2f kg\n", i, i * 0.453592); // 1 lb = 0.453592 kg
+    {
+       if ((a > 98.6) && (b < 98.6))
+       {
+        printf("%6.2f degrees F = %6.2 degrees C\n" ,
+               98.6, (98.6 - 32.0) * 5.0 / 9.0);
+       }
+         printf("%6.2f degrees F = %6.2 degrees C\n" ,
+        a, (a - 32.0) * 5.0 / 9.0);
+        b = a;
+        a = a + 10;
     }
-
-    return 0;
+     return 0;
 }
